@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="4242VerifyOutput:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/4242VerifyOutput_jar</output-path>
+    <root id="archive" name="4242VerifyOutput.jar">
+      <element id="module-output" name="4242VerifyOutput" />
+    </root>
+  </artifact>
+</component>
