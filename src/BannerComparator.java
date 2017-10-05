@@ -2,15 +2,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by cwhite on 10/3/2017.
+ * Compares all banners.
  */
 public class BannerComparator {
-    private List<Banner> allBanners;
     private List<Banner> faultyBanners = new ArrayList<>();
 
 
     public BannerComparator(List<Banner> allBanners) {
-        this.allBanners = allBanners;
         faultyBanners = extractFaultyBanners(allBanners);
     }
 

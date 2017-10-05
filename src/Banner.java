@@ -1,5 +1,5 @@
 /**
- * Created by cwhite on 10/3/2017.
+ * Banner object holds configurator input and cart input, and banner operations.
  */
 public class Banner {
     private String configuratorInput;

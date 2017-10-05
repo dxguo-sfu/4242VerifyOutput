@@ -1,7 +1,7 @@
 import java.util.List;
 
 /**
- * Created by cwhite on 10/3/2017.
+ * Outputs results.
  */
 public class DisplayResults {
     public DisplayResults(List<Banner> allBanners, List<Banner> faultyBanners) {

@@ -5,16 +5,14 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * Created by cwhite on 10/3/2017.
+ * Creates a list of Banner objects from text file.
  */
 public class BannerExtractor {
-    //private String bannerInputPath = "data/BannerInput.txt"; //Test Data
-    private File bannerInput;
     private List<Banner> banners;
 
 
     public BannerExtractor(String filepath) throws FileNotFoundException{
-        bannerInput = new File(filepath);
+        File bannerInput = new File(filepath);
         if (inputIsValid(bannerInput)) {
             banners = makeBannerListFromFile(bannerInput);
         } else {

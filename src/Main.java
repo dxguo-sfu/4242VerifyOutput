@@ -2,12 +2,9 @@ import java.io.FileNotFoundException;
 import java.util.List;
 
 /**
- * Created by cwhite on 10/3/2017.
+ * Main control panel that tells everything to go.
  */
 public class Main {
-    private List<Banner> allBanners;
-    private List<Banner> faultyBanners;
-
     public static void main(String[] args) throws FileNotFoundException{
         if (args.length == 1) {
             String filepath = args[0];
@@ -18,8 +15,8 @@ public class Main {
     }
 
     private Main(String filepath) throws FileNotFoundException {
-        allBanners = getAllBanners(filepath);
-        faultyBanners = getFaultyBanners();
+        List<Banner> allBanners = getAllBanners(filepath);
+        List<Banner> faultyBanners = getFaultyBanners(allBanners);
         new DisplayResults(allBanners, faultyBanners);
     }
 
@@ -28,7 +25,7 @@ public class Main {
         return bannerExtractor.getBanners();
     }
 
-    private List<Banner> getFaultyBanners() {
+    private List<Banner> getFaultyBanners(List<Banner> allBanners) {
         BannerComparator bannerComparator = new BannerComparator(allBanners);
         return bannerComparator.getFaultyBanners();
     }
